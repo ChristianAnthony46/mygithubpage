@@ -3,11 +3,46 @@
         <title>
             Blobfish 2016
         </title>
+        <style type="text/css">
+            #cruz_quote
+            {
+                text-align: center;
+                font-weight: bold;
+            }
+            img
+            {
+                margin-top: 1.5em;
+                height: 45%;
+                width: 45%;
+            }
+        </style>
     </head>
 
     <body>
-        <img src="http://www.nationofchange.org/2015/wp-content/uploads/TedCruz031415.jpg" height="50%" width="50%" />
-        <img src="https://critter.science/wp-content/uploads/2015/04/POTD_Blobfish_2930969k.jpg" height="50%" width="50%" />
+        <div id="cruz_quote">
+        </div>
+        <center>
+            <img src="http://www.nationofchange.org/2015/wp-content/uploads/TedCruz031415.jpg" height="45%" width="45%" />
+            <img src="https://critter.science/wp-content/uploads/2015/04/POTD_Blobfish_2930969k.jpg" height="45%" width="45%" />
+        </center>
     </body>
+    <script type="text/javascript">
+        function pickQuote()
+        {
+            var cruzQuotes = [];
+            cruzQuotes[0] = "The moon might be as intimidating as Obamacare.";
+            cruzQuotes[1] = "Twenty years from now if there is some obscure trivial pursuits question, I am confident I will be the answer.";
+            cruzQuotes[2] = "Look, I'm something that's not supposed to exist. A Hispanic Republican.";
+            cruzQuotes[3] = "Sequestration sounds like an exotic wildlife disease. Nobody has any idea what the heck that is."
+            cruzQuotes[4] = "Net Neutrality is Obamacare for the Internet; the Internet should not operate at the speed of government.";
+            cruzQuotes[5] = "Our foreign policy is detente, which I’m pretty sure is French for surrender.";
+            cruzQuotes[6] = "Each day I learn what a scoundrel I am.";
+            cruzQuotes[7] = "Having spent the past month up in D.C., it is really great to be back in America.";
 
+            var choice = Math.floor(Math.random() * cruzQuotes.length);
+            document.getElementById("cruz_quote").innerHTML = "\""+cruzQuotes[choice]+"\" -Ted Cruz";
+        }
+
+        pickQuote();
+    </script>
 </html>
